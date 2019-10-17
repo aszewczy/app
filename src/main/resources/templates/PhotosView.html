@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+    <title>Car App</title>
+    <link href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          rel="stylesheet"/>
+</head>
+<body>
+<div align="center">
+    <label class="col-form-label">Photos </label>
+    <br/><br/>
+
+
+    <form action="#" method="get" th:action="@{/find}" th:object="${params}">
+
+        <div class="text-center py-4 ">
+            <label class="col-sm-4 col-form-label">Page: </label>
+            <div class="col-sm-3">
+                <input class="form-control" th:field="*{page}" type="number"/>
+            </div>
+            <br/><br/>
+            <label class="col-sm-4 col-form-label">Limit: </label>
+            <div class="col-sm-3">
+                <input class="form-control" th:field="*{limit}" type="number"/>
+            </div>
+            <br/><br/>
+            <div class="text-center py-4 mt-3">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </div>
+    </form>
+
+    <br/>
+    <br/>
+
+    <tr scope="row" th:each="photo:${photos}">
+        <td th:text="${photo.getAuthor()}"></td>
+        <br/>
+        <img th:src="${photo.getDownloadUrl()}" th:width="200px"/><br/>
+
+    </tr>
+
+
+</div>
+</div>
+</body>
+</html>
