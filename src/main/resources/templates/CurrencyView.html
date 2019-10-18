@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+    <title>Car App</title>
+    <link href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          rel="stylesheet"/>
+</head>
+<body>
+
+
+<div align="center">
+
+
+    <form method="get" th:action="@{/answer}">
+        <p class="h4 text-center py-4">Guess PLN rate of
+        <p class="h4 text-center py-4" th:text="${currency}"></p> </p>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <div class="input-group">
+                    <input class="form-control " name="answer" type="text">
+                    <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">Check</button>
+            </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </form>
+</div>
+
+
+</body>
+</html>

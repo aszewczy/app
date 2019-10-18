@@ -26,7 +26,6 @@ Z wykorzystaniem swojego ulubionego narzędzia do tworzenia GUI wyświetl wszyst
 
 
 @Controller
-@SessionAttributes
 public class PhotosController {
 
 

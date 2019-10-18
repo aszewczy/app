@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+    <title>Car App</title>
+    <link href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          rel="stylesheet"/>
+</head>
+<body>
+
+<div align="center">
+<label class="col-form-label">Weather for city: </label>
+
+
+    <span  class="text-primary"  th:text="${weather.getName()}"/> <br>
+    <span   th:text="${weather.getWeather().get(0).getDescription()}"/><br>
+
+    <img th:src="${weather.getWeather().get(0).getSrc()}"><br>
+    Temp: <span th:text="${weather.getMain().getTemp()}"/> &deg;C<br>
+</div>
+</body>
+</html>

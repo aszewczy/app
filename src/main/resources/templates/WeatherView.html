@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+    <title>Car App</title>
+    <link rel="stylesheet"
+          href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" />
+</head>
+<body>
+
+
+<div align="center">
+
+
+    <form th:action="@{/result}" method="get">
+        <p class="h4 text-center py-4">Check weather for city:  </p>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <div class="input-group">
+        <input type="text" name="city" class="form-control " >
+                    <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">Search</button>
+            </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </form>
+</div>
+
+
+
+
+</body>
+</html>
