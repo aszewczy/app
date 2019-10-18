@@ -1,4 +1,4 @@
-package pl.szewczyk.h5.app.model;
+package pl.szewczyk.h5.app.controller;
 
 
 import org.springframework.stereotype.Controller;
@@ -6,9 +6,22 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
+import pl.szewczyk.h5.app.model.ActualCurrency;
+import pl.szewczyk.h5.app.model.Currency;
 
 import java.util.Random;
-
+/*
+gra walutowa
+Pobierz aktualny kursy walut. W momencie, kiedy gracz wejdzie do gry wyświetla mu się losowo wybrana waluta, której kurs względem złotówki musi odgadnąć.
+Np.
+Aplikacja: Wprowadź aktualną kurs USD uwzględniając 2 miejsca po przecinku
+Użytkownik: 4,20
+Aplikacja: Za dużo
+Użytkownik: 3,90
+Aplikacja: Za mało
+Użytkownik: 3,93
+Aplikacja: Gratki! Udało sie (zliczanie todo) za 3 razem!
+*/
 @Controller
 public class CurrencyController {
 
